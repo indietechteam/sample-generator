@@ -219,7 +219,7 @@ def main():
         callbacks=[ckpt_callback, demo_callback, exc_callback],
         logger=wandb_logger,
         log_every_n_steps=1,
-        max_epochs=2000,
+        max_epochs=1600,
     )
 
     diffusion_trainer.fit(diffusion_model, train_dl, ckpt_path=args.ckpt_path)
